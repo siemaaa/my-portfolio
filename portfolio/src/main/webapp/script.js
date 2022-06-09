@@ -26,3 +26,11 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function showQuote() {
+    const responseFromServer = await fetch('/CBT-quotes');
+    const textFromResponse = await responseFromServer.text();
+  
+    const quoteContainer = document.getElementById('quote-container');
+    quoteContainer.innerText = textFromResponse;
+  }
