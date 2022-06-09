@@ -34,6 +34,8 @@ async function showQuote() {
     const textFromResponse = await responseFromServer.json();
   
     const quoteContainer = document.getElementById('quote-container');
-    quoteContainer.innerText = textFromResponse;
+    const randQuote = textFromResponse[Math.floor(Math.random() * textFromResponse.length)]
+    quoteContainer.innerText = randQuote;
 
+    //console.log(textFromResponse[0]);
   }
