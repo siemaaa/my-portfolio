@@ -15,6 +15,8 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import com.google.gson.Gson;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,10 +25,18 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that responds with the current date. */
 @WebServlet("/CBT-quotes")
 public class QuoteServlet extends HttpServlet {
-
+    public ArrayList<String> quotations = new ArrayList<String>();
+    
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
-    response.getWriter().println("One helpful way to look at a situation differently is to think about it from the perspective of a friend.");
+    quotations.add("In developing your mindset, practice compassion. What's a more empathetic and forgiving lens through which to view yourself and others?");
+    quotations.add("Mindfulness is not the state of thinking about nothing. Rather, it is practicing focus and paying attention to the present moment.");
+    quotations.add("Try naming frequent thought topics (e.g. money worry) to make it easier to notice and redirect your mind.");
+    Gson gson = new Gson();
+    String json = gson.toJson(quotations);
+    //return json;
+    response.getWriter().println(json);
   }
+
 }

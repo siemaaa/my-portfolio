@@ -28,9 +28,12 @@ function addRandomGreeting() {
 }
 
 async function showQuote() {
+    // Send a request to /CBT-quotes
     const responseFromServer = await fetch('/CBT-quotes');
-    const textFromResponse = await responseFromServer.text();
+    // Parse the response as JSON
+    const textFromResponse = await responseFromServer.json();
   
     const quoteContainer = document.getElementById('quote-container');
     quoteContainer.innerText = textFromResponse;
+
   }
