@@ -41,13 +41,13 @@ async function showQuote() {
   }
 
   var i = 0;
-    var txt = 'Lorem ipsum dummy text blabla.';
+    var txt = 'I\'m Siema';
     // The lower the var, the faster it is.
-    var speed = 40;
+    var speed = 65;
     
         function typeWriter() {
           if (i < txt.length) {
-            document.getElementById("demo").innerHTML += txt.charAt(i);
+            document.getElementById("movingTxt").innerHTML += txt.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
           }

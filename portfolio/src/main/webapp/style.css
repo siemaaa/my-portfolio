@@ -1,3 +1,7 @@
+body {
+    background-color: #F5F5F5;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -6,4 +10,22 @@
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#newContent {
+    margin: 0 auto;
+    padding-top: 110px;
+    display: flex;
+    align-items: center;
+    width: 980px;
+    padding-bottom: 110px;
+}
+
+p {
+    font-family: 'EB Garamond', serif;
+    color: #433218;
+}
+#Plant {
+    padding-left: 40px;
+    width: 80%;
 }
