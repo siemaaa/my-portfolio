@@ -45,6 +45,12 @@
         <version>2.9.0</version>
     </dependency>
 
+    <!-- Maven Dependency for Sentiment Analysis-->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-language</artifactId>
+        <version>1.55.0</version>
+    </dependency>
   </dependencies>
 
   <build>
