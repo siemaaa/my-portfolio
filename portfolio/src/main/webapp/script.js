@@ -26,3 +26,29 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function showQuote() {
+    // Send a request to /CBT-quotes
+    const responseFromServer = await fetch('/CBT-quotes');
+    // Parse the response as JSON
+    const textFromResponse = await responseFromServer.json();
+  
+    const quoteContainer = document.getElementById('quote-container');
+    const randQuote = textFromResponse[Math.floor(Math.random() * textFromResponse.length)]
+    quoteContainer.innerText = randQuote;
+
+    //console.log(textFromResponse[0]);
+  }
+
+  var i = 0;
+    var txt = 'I\'m Siema';
+    // The lower the var, the faster it is.
+    var speed = 65;
+    
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("movingTxt").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
