@@ -41,14 +41,14 @@ async function showQuote() {
   }
 
   var i = 0;
-    var txt = 'I\'m Siema';
+    var txt = 'Hi, I\'m Siema';
     // The lower the var, the faster it is.
     var speed = 65;
     
-        function typeWriter() {
-          if (i < txt.length) {
-            document.getElementById("movingTxt").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
+    function typeWriter() {
+        if (i < txt.length) {
+        document.getElementById("movingTxt").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
         }
+    }

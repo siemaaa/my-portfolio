@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <script src="script.js"></script>
   </head>
-  <body onLoad="typeWriter();">
+  <body>
+    <img id="Plant" src="/images/plant1.jpg">
       <div id="newContent">
-          <div>
-            <p style="font-size: 60px;">Hi,</p>
             <p style="font-size: 60px;" id="movingTxt"></p>
-          </div>
-        <img src="/images/plant1.jpg" id="Plant">
+          <script type="text/javascript">
+            typeWriter();
+         </script>
       </div>
     <div id="content">
       <h1>Siema's Working Portfolio, Unstyled</h1>
@@ -57,7 +57,15 @@
         <input type="submit" />
         
       </form>
-      <p id="sentimentTest">Here is where I test the sentiment analysis of this line.</p>
+      <h2>Here is where I test the sentiment analysis of your input line.</h2>
+    <p>Type a message and click submit to analyze its sentiment:</p>
+
+    <form method="POST" action="/sentiment">
+      <textarea name="message"></textarea>
+      <br/>
+      <button>Submit</button>
+      <p id="quote-container-sentiment-score"></p>
+    </form>
     </div>
   </body>
 </html>

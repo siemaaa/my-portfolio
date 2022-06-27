@@ -13,10 +13,9 @@ body {
 }
 
 #newContent {
-    margin: 0 auto;
-    padding-top: 110px;
-    display: flex;
-    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 980px;
     padding-bottom: 110px;
 }
@@ -26,6 +25,9 @@ p {
     color: #433218;
 }
 #Plant {
-    padding-left: 40px;
-    width: 80%;
+    padding-top: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
